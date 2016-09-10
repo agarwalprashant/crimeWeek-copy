@@ -1,0 +1,43 @@
+
+
+<ion-view view-title="<img class='title-image' src='http://www.crime-week.com/img/LOGO.png' width='200px' height='45px' align='center' />">
+
+
+
+  <ion-content class="has-header padding">
+<br>
+       <div align="right">
+        <i class = "icon icon ion-ios-calendar-outline"></i>
+       {{date}}
+       </div>
+
+<br>
+
+
+    <ion-list>
+      <img src="{{allDuniyaNews[3].img}}" width="150px" height="100px">
+
+
+      <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="news in allDuniyaNews" href="#/app/duniya/{{news.$id}}">
+                <img ng-src="{{news.img}}">
+      
+        
+        {{news.snippet}}
+
+        <!-- {{news.detail}} -->
+        <br>
+        {{news.timestamp}}
+        
+           
+        
+           <i class="icon ion-chevron-right icon-accessory"></i>
+
+
+      </ion-item>
+
+
+    </ion-list>
+  </ion-content>
+</ion-view>
+
+
