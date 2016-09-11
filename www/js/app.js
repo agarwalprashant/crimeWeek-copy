@@ -13,13 +13,15 @@ angular.module('starter', ['ionic', 'starter.controllers','starter.services'])
   });
 })
 
-
 .config(function($stateProvider, $urlRouterProvider) {
   $stateProvider
 
 
- 
-
+    .state('homePage',{
+      url:'/homePage',
+      templateUrl:'templates/homePage.html'
+      // controller:'homePageCtrl'
+    })
 
     .state('app', {
     url: '/app',
@@ -27,17 +29,6 @@ angular.module('starter', ['ionic', 'starter.controllers','starter.services'])
     templateUrl: 'templates/menu.html',
     controller: 'AppCtrl'
   })
-
- .state('app.homePage',{
-    url: '/homePage',
-    views:{
-      'menuContent':{
-        templateUrl:'templates/homePage.html'
-        // controller:'BadiKhabareinCtrl'
-      }
-    }
-  })
-   
 
   .state('app.badiKhabar',{
     url: '/badiKhabarein',
@@ -313,7 +304,7 @@ angular.module('starter', ['ionic', 'starter.controllers','starter.services'])
 
   
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/app/badiKhabarein');
+  $urlRouterProvider.otherwise('/homePage');
   // $urlRouterProvider.otherwise('/homePage');
 
 });
